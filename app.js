@@ -5,12 +5,7 @@ const client = new kafka.KafkaClient({kafkaHost: 'localhost:9092'});
 const producer = new Producer(client);
 const uuidv4 = require('uuid/v4');
 
-const keys = {
-    consumer_key : "ShEvIpUEuIqtK3IzvZkgPTzIq",
-    consumer_secret : "m3Fk84NSZmYcvMmlF7QICbDU23FvEfz4tQudhxyRU0S96Jxl4s",
-    token : "71194647-tVivkE02FYVg53D06qsmQ5rDnyUyKs62KrRfV3h9r",
-    token_secret : "mCDwyckCDwiPWtSTQ9ZAG4iIxvgc1l74cpBx2yXaa6ckD"
-};
+
 const Twitter = new TwitterStream(keys, null, null);
 const trackPhrase = 'trump';
 
