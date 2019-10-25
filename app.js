@@ -3,16 +3,11 @@
 const TwitterStream = require('twitter-stream-api');
 const fs = require('fs');
 
-const keys = {
-    consumer_key : "",
-    consumer_secret : "",
-    token : "",
-    token_secret : ""
-};
+// test comment
 
 const Twitter = new TwitterStream(keys, null, null);
 Twitter.stream('statuses/filter', {
-    track: 'serverless'
+    track: 'javascript'
 });
 
 Twitter.on('connection rate limit', function (httpStatusCode) {
@@ -24,6 +19,6 @@ Twitter.on('connection success', function (uri) {
 });
 
 Twitter.on('data', function (obj) {
-    console.log('connection success', obj);
+    console.log('>>', obj.text,' ||| ',obj.user.name,'\n');
 });
 // Twitter.pipe(fs.createWriteStream('tweets.json'));
