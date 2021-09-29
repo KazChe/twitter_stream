@@ -9,7 +9,7 @@
   "author": "kaz",
   "license": "ISC",
   "dependencies": {
-    "i": "^0.3.6",
+    "i": "^0.3.7",
     "kafka-node": "^4.1.3",
     "npm": "^6.12.0",
     "twitter-stream-api": "^0.5.2",
